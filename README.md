@@ -1,11 +1,16 @@
 #EditText结合Fileter过滤器效果的设计
 之前看到一个SerchView的搜索框，发现里面使用到了Filter，可以很方便的实现输入框中数据的过滤和判断，这里介绍下给大家。
 过滤效果：
+
 ![1](http://i.imgur.com/i3O4VPk.gif)
+
 程序实现的功能是：用户输入用户名或家乡里面包含的任何字符，都会产生符合条件的ListView列表。
 
 程序的实现：
+
+
 #1.主页面的布局
+
 一个EditText和ListView
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -270,8 +275,12 @@ public class MyActivity extends Activity implements AdapterView.OnItemClickListe
 
 ```
 其实程序中过滤器Filter的具体实现是在适配器Adapter中的，然后在外面通过Filter.filter(s);传入需要过滤的数据，从而得出刷选后所求的数据。
+
 网上也有很多封装得比较多的searchView，也是使用Filter来实现数据过滤的。
+
 
 ![2](http://i.imgur.com/YpglaoI.jpg)
 
+
 共勉：念念不忘必有回响。
+
